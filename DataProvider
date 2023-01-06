@@ -1,0 +1,15 @@
+public class NewTest1 {
+  @Test(dataProvider = "dp")
+  public void f(Integer a, Integer b,Integer c) {
+	  Integer Sum = a + b ;
+	  Assert.assertEquals(c, Sum);
+  }
+
+  @DataProvider
+  public Object[][] dp() {
+    return new Object[][] {
+    	{1,2,3},
+    	{2,3,7}}; 
+    
+  }
+}
